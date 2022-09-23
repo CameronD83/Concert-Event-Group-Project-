@@ -1,0 +1,339 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color:#131313;
+  place-items:center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #131313;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  height: 80px;
+}
+
+#navbar__logo {
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.fa-gem {
+  margin-right: 0.5rem;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: purple;
+  color: #fff;
+}
+
+.button:hover {
+  background: #32CD32;
+  transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+  color: purple;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+
+    
+  }
+@media screen and (max-width: 480px) {
+}
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+  }
+
+  .navbar__menu.active {
+    background: #131313;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+    padding-left: 25px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navbar__btn {
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: 0;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+/* GUEST TAB */
+.guest_list_header {
+  background-image: url(https://31.media.tumblr.com/a62e72357f7fe963413797c26360e62c/tumblr_n3896siiaN1s5nvu8o1_400.gif);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  display: flex;
+  font-size: 3vw;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.guest-back {
+  background: linear-gradient(#800080,#161616,#DE006F);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  height: 65%;
+  border-radius: 15px;
+  overflow: clip;
+}
+.guest-column {
+  background-color: black;
+  border: 2px solid #333;
+  height: 180px;
+  padding: 10px;
+  border-radius: 15px;
+  overflow: clip;
+  text-decoration: none;
+}
+
+.guest_list_name {
+  text-align: center;
+  font-weight: bold;
+  font-family: arial;
+  text-decoration: none;
+  width: 30%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.guest_list_name ul{
+  margin: 10px;
+  padding: 10px;
+}
+
+.guest_list_name li a{
+  list-style: none;
+  font-size: 30px;
+  text-decoration: none;
+  color: purple;
+  display: block;
+  background-color: #111;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.guest_list_name li{
+  text-decoration: none;
+  list-style: none;
+}
+
+.guest_list_name li a:hover {
+  color: black;
+  background-color: white;
+  transition: background-color 0.4s, color 0.4s;
+}
+.guest_list_name li a:active {
+  text-decoration: none;
+  display: block;
+  color: white;
+  background-color: purple;
+}
+
+.guest-photo {
+  border: solid 5px #222;
+  border-radius: 20px;
+  max-height: 450px;
+  max-width: 230px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.guest-photo:hover {
+  border: solid 5px white;
+  border-radius: 20px;
+  transition: 0.4s, color 0.4s;
+  cursor: pointer;
+}
+
+.video {
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 600px;
+  background: #111;
+  border-radius: 20px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: clip;
+  border: 2px solid purple;
+}
+.video:hover {
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 600px;
+  background:;
+  border-radius: 20px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: clip;
+  border: 2px solid white;
+  transition: 0.4s, color 0.4s;
+}
+iframe {
+  border-radius: 20px;
+}
